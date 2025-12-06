@@ -1,0 +1,14 @@
+//for converting html into pdf and download it 
+npm install puppeteer
+
+//there is a generate-pdf.js
+//in terminal go to the generate-pdf.js file location
+
+than :
+node generate-pdf.js
+ 
+//it will download the file
+
+//how user will download the Resume
+1. run the App.tsz file - npm run dev (cd : portfolio folder)
+2. run server.js file - node server.js or nodemon server.js (cd : backend)
