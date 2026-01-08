@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+var isIsomorphic = function(s, t) {
+    let pair = {};
+    for(let i = 0; i < s.length; i++){
+        if(!pair[s[i]]){
+            pair[s[i]] = t[i];
+        }
+        if(pair[s[i]] != t[i]){
+            return false;
+        }
+    }
+    return true;
+};
+console.log(isIsomorphic("bbbaaaba","aaabbbba"))
+s =
+"badc"
+t =
+"baba"
+
+
+var isIsomorphic = function(s, t) {
+    if (s.length !== t.length) return false;
+
+    let pairST = {}; // s → t
+    let pairTS = {}; // t → s
+
+    for (let i = 0; i < s.length; i++) {
+        let c1 = s[i];
+        let c2 = t[i];
+
+        // if not mapped yet, set both directions
+        if (!pairST[c1] && !pairTS[c2]) {
+            pairST[c1] = c2;
+            pairTS[c2] = c1;
+        }
+
+        // check consistency both ways
+        if (pairST[c1] !== c2 || pairTS[c2] !== c1) {
+            return false;
+        }
+    }
+
+    return true;
+};
+
+</script>

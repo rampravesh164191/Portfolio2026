@@ -3,7 +3,7 @@ import { cssSVG, expressSVG, firebaseSVG, gitSVG, htmlSVG, javascriptSVG, mongod
 
 function TechStack() {
     return (
-        <div className="border border-black max-w-[1380px] max-h-[1000px] mt-7">
+        <div id="tech" className="max-w-[1380px] max-h-[1000px] m-auto mt-7">
             <div>
                 <h1 className="text-[30px] text-center">Frontend</h1>
                 <div className="w-full h-full flex flex-wrap justify-center items-center gap-10 p-7">

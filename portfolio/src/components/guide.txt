@@ -12,3 +12,6 @@ node generate-pdf.js
 //how user will download the Resume
 1. run the App.tsz file - npm run dev (cd : portfolio folder)
 2. run server.js file - node server.js or nodemon server.js (cd : backend)
+
+//portfolio link
+https://flourishing-sundae-2b1f8e.netlify.app/
