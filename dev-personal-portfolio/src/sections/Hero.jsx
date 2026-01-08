@@ -1,23 +1,7 @@
 import { Button } from "@/components/Button"
 import { ArrowRight, ChevronDown, Download, Github, Linkedin, Twitter } from "lucide-react"
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton"
-
-const skills = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React",
-    "Tailwind CSS",
-    "TypeScript",
-    "Node.js",
-    "MongoDB",
-    "Postman",
-    "Firebase",
-    "Git",
-    "Github Actions",
-    "Redis"
-]
-
+import { skills } from "./SkillsArray";
 export const Hero = () => {
     return <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Bg  */}
@@ -45,21 +29,21 @@ export const Hero = () => {
                 <div className="space-y-8">
                     <div className="animate-fade-in">
                         <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
-                            <span className="w-2 h-2 bg-(--color-primary) rounded-full animate-pulse" />Software Engineer . React Specialist
+                            <span className="w-2 h-2 bg-(--color-primary) rounded-full animate-pulse" />Software Engineer . Full-Stack (React & Node)
                         </span>
                     </div>
                     {/* Headline  */}
                     <div className="space-y-4">
                         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading animate-fade-in animation-delay-100">
-                            Crafting <span className="text-(--color-primary) glow-text">digital</span>
+                            Full-Stack <span className="text-(--color-primary) glow-text">web</span>
                             <br />
-                            experiences with
+                            applications
                             <br />
-                            <span className="font-serif italic font-normal text-white">Precision</span>
+                            <span className="font-serif italic font-normal text-white">done right</span>
                         </h1>
-                        <p className="text-lg text-(--color-muted-forecround) max-w-lg animate-fade-in animation-delay-200">
-                            Hi, I am Rampravesh - a software engineer specializing in React, Next.js and TypeScript,
-                            I build scalable, performant web applications that users love
+                        <p className="text-lg text-(--color-muted-foreground) max-w-lg animate-fade-in animation-delay-200">
+                            Hi, I’m Rampravesh. I build full-stack web applications using
+                            React, Node.js, Express, TypeScript, and MongoDB.
                         </p>
                     </div>
                     {/* call to action : CTAs  */}
@@ -71,9 +55,9 @@ export const Hero = () => {
                     <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
                         <span className="text-sm text-(--color-muted-foreground)">Follow Me:</span>
                         {[
-                            { icon: Github, href: "#" },
-                            { icon: Linkedin, href: "#" },
-                            { icon: Twitter, href: "#" }
+                            { icon: Github, href: "https://github.com/rampravesh164191" },
+                            { icon: Linkedin, href: "https://www.linkedin.com/in/rampravesh164191/" },
+                            // { icon: Twitter, href: "#" }
                         ].map((social, idx) => (
                             <a key={idx} href={social.href} className="p-2 rounded-full glass hover:bg-(--color-primary/10) hover:text-(--color-primary) transition-all duration-300">{<social.icon className="w-5 h-5" />}</a>
                         ))}
@@ -100,8 +84,8 @@ export const Hero = () => {
                             </div>
                             {/* stats badge  */}
                             <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
-                                <div className="text-2xl font-bold text-(--color-primary)">5+</div>
-                                <div className="text-xs text-(--color-muted-foreground)">Years Exp</div>
+                                <div className="text-2xl font-bold text-(--color-primary)">4+</div>
+                                <div className="text-xs text-(--color-muted-foreground)">projects</div>
                             </div>
                         </div>
                     </div>
@@ -113,8 +97,17 @@ export const Hero = () => {
                 <div className="relative overflow-hidden">
                     <div className="flex animate-marquee">
                         {[...skills, ...skills].map((skill, idx) => (
-                            <div key={idx} className="flex-shrink-0 px-8 py-4">
-                                <span className="text-xl font-semibold text-(--color-muted-foreground/50) hover:text-(--color-muted-foreground) transition-colors">{skill}</span>
+                            <div
+                                key={idx}
+                                className="flex-shrink-0 px-8 py-4 flex items-center justify-center"
+                            >
+                                {skill.type === "icon" ? (
+                                    skill.element
+                                ) : (
+                                    <span className="text-xl font-semibold text-(--color-muted-foreground/50) hover:text-(--color-muted-foreground)">
+                                        {skill.value}
+                                    </span>
+                                )}
                             </div>
                         ))}
                     </div>

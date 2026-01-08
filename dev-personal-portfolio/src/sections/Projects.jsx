@@ -1,41 +1,45 @@
 import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
+import img1 from "../assets/project_images/1.png";
+import img2 from "../assets/project_images/2.png";
+import img3 from "../assets/project_images/3.png";
+import img4 from "../assets/project_images/4.png";
 const projects = [
   {
-    title: "Fintech Dashboard",
+    title: "CRM Management System",
     description:
-      "A comprehensive financial analytics platform with real-time data visualization, portfolio management, and AI-powered insights.",
-    image: "/projects/project1.png",
-    tags: ["React", "Typescript", "NodeJS"],
-    link: "#",
-    github: "#",
+      "A full-stack CRM system to manage leads, track interactions, and visualize sales data.",
+    image: img1,
+    tags: ["React", "Typescript","Tailwindcss", "NodeJS", "Expressjs", "MongoDB","Render"],
+    link: "https://crm-management-sayan-osbvuu1wq-rams-projects-eab30cd6.vercel.app/signup",
+    github: "https://github.com/rampravesh164191/CRM_Management_Sayan",
   },
   {
-    title: "E-Commerce Platform",
+    title: "Grocery List Manager",
     description:
-      "A full-featured e-commerce solution with inventory management, payment processing, and analytics dashboard.",
-    image: "/projects/project2.png",
-    tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
-    link: "#",
-    github: "#",
+      "A smart grocery list app that tracks items, suggests recipes, and helps users shop efficiently.",
+    image: img2,
+    tags: ["HTML", "CSS", "Javascript", "Localstorage","Netlify"],
+    link: "https://darling-klepon-897c85.netlify.app/",
+    github: "https://github.com/rampravesh164191/grocery_list_manager",
   },
   {
-    title: "AI Writing Assistant",
+    title: "Task Manager : GoalCraft",
     description:
-      "An intelligent writing tool powered by GPT-4, helping users create better content faster.",
-    image: "/projects/project3.png",
-    tags: ["React", "OpenAI", "Python", "FastAPI"],
-    link: "#",
-    github: "#",
+      "GoalCraft is a productivity app with task management, goal tracking, and a Pomodoro focus timer.",
+    image: img3,
+    tags: ["HTML", "CSS", "Javascript", "JSON Server", "Vercel"],
+    link: "https://constitution-coders-020.vercel.app/",
+    github: "https://github.com/rampravesh9991/Constitution-Coders_020",
   },
   {
-    title: "Project Management Tool",
+    title: "Learners Hub",
     description:
-      "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
-    image: "/projects/project4.png",
-    tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
-    link: "#",
-    github: "#",
+      "An educational platform offering free, high-quality learning resources.",
+    image: img4,
+    tags: ["HTML", "CSS", "SCSS","Netlify"],
+    link: "https://6671565ba1ffece66ecd554d--heartfelt-churros-269c59.netlify.app/",
+    github: "https://github.com/Arpan-creator/IBM-Innovators_045-",
   },
 ];
 
@@ -52,15 +56,14 @@ export const Projects = () => {
             Featured Work
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-(--color-secondary-foreground)">
-            Projects that
+            Recent
             <span className="font-serif italic font-normal text-white">
               {" "}
-              make an impact.
+              Projects
             </span>
           </h2>
           <p className="text-(--color-muted-foreground) animate-fade-in animation-delay-200">
-            A selection of my recent work, from complex web applications to
-            innovative tools that solve real-world problems.
+            A selection of projects I’ve built while learning and experimenting with web development.
           </p>
         </div>
 
@@ -133,12 +136,12 @@ export const Projects = () => {
         </div>
 
         {/* View All CTA */}
-        <div className="text-center mt-12 animate-fade-in animation-delay-500">
+        {/* <div className="text-center mt-12 animate-fade-in animation-delay-500">
           <AnimatedBorderButton>
             View All Projects
             <ArrowUpRight className="w-5 h-5" />
           </AnimatedBorderButton>
-        </div>
+        </div> */}
       </div>
     </section>
   );

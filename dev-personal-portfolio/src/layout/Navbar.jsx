@@ -5,8 +5,9 @@ import { useEffect, useState } from "react"
 const navLinks = [
     { href: "#about", label: "About" },
     { href: "#projects", label: "Projects" },
-    { href: "#experience", label: "Experience" },
-    { href: "#testimonials", label: "Testimonials" }
+    { href: "#contact", label: "Contact Me" },
+    // { href: "#experience", label: "Experience" },
+    // { href: "#testimonials", label: "Testimonials" }
 ]
 
 export const Navbar = () => {
@@ -27,7 +28,7 @@ export const Navbar = () => {
             }  z-50`}>
             <nav className="container mx-auto px-6 flex items-center justify-between">
                 <a href="#" className="text-xl font-bold tracking-tight hover:text-(--color-primary)">
-                    PM<span className="text-(--color-primary)">.</span>
+                    RP<span className="text-(--color-primary)">.</span>
                 </a>
                 {/* Desktop nav  */}
                 <div className="hidden md:flex items-center gap-1">
@@ -39,7 +40,7 @@ export const Navbar = () => {
                 </div>
                 {/* CTA button  */}
                 <div className="hidden md:block">
-                    <a href="#contact"><Button size="sm">Contact Me</Button></a>
+                    <a href="/Rampravesh_Sharma_Resume.pdf" download=""><Button>Resume</Button></a>
                 </div>
                 {/* mobile menu button  */}
                 <button className="md:hidden p-2 text-(--color-foreground) cursor-pointer" onClick={() => setIsMobileMenuOpen((prev) => !prev)}>
@@ -53,7 +54,7 @@ export const Navbar = () => {
                         {navLinks.map((link, index) => (
                             <a href={link.href} key={index} className="text-lg text-(--color-muted-foreground) hover:text-(--color-foreground) py-2">{link.label}</a>
                         ))}
-                        <a href="#contact"><Button>Contact Me</Button></a>
+                        <a href="/Rampravesh_Sharma_Resume.pdf" download=""><Button>Resume</Button></a>
                     </div>
                 </div>
             )}

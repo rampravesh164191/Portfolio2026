@@ -31,3 +31,8 @@ public key : emailjs -> account -> public key
 template id : emailjs -> email templates -> create new -> contact us (choose) -> create template
 template id : then -> contacts us-> settings -> template id
 - you can also design the content of the message in contact us -> content -> edit content -> save it
+
+**Getting SVG path of tech**
+https://simpleicons.org/?q=interne
+anyway asked gpt to find it.
+
